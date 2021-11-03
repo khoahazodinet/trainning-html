@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+}
+
 body {
+  margin: 0 auto;
   position: relative;
-  width: 1440px;
+  max-width: 1440px;
   height: 5900px;
   background: #FFFFFF;
 }
@@ -27,28 +29,22 @@ body {
 }
 
 .heroPage__container {
+  position: relative;
   width: 100%;
-  min-height: 100vh;
   background-image: url("./images/HeroPage/BG.png");
   background-size: cover;
   background-position: center;
-  position: absolute;
   height: 1156px;
-  left: 0;
-  top: 0;
 }
 .heroPage__container__navBar {
-  position: absolute;
   width: 100%;
   height: 110px;
-  left: 0;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
 }
 .heroPage__container__navBar__logo {
-  position: absolute;
-  left: 6.67%;
-  top: 23.64%;
-  bottom: 7.27%;
+  margin-left: 6.67%;
+  margin-top: 26px;
 }
 .heroPage__container__navBar__button {
   /* Auto Layout */
@@ -58,20 +54,16 @@ body {
   padding: 12px 24px;
   cursor: pointer;
   border: none;
-  position: absolute;
   width: 210px;
   height: 46px;
-  right: 6.67%;
-  top: 44px;
+  margin-right: 6.67%;
+  margin-top: 44px;
   background: #FFFFFF;
   border-radius: 10px;
 }
 .heroPage__container__navBar__button__hotline {
-  position: static;
   width: 22px;
   height: 22px;
-  left: 24px;
-  top: 12px;
   /* Inside Auto Layout */
   flex: none;
   order: 0;
@@ -99,31 +91,6 @@ body {
   flex-grow: 0;
   margin: 0px 8px;
 }
-.heroPage__container__group34 {
-  position: absolute;
-  width: 644px;
-  height: 678px;
-  right: 3.33%;
-  top: 273px;
-}
-.heroPage__container__group34__heroIllustration {
-  position: absolute;
-  width: 555px;
-  height: 586px;
-  z-index: 10;
-  background: url("./images/HeroPage/Group34/Hero_illustration.png");
-  filter: drop-shadow(0px 4px 9px rgba(24, 41, 70, 0.32));
-}
-.heroPage__container__group34__iceGroup {
-  position: absolute;
-  width: 333px;
-  height: 184px;
-  right: 5%;
-  top: 500px;
-  z-index: 11;
-  background: url("./images/HeroPage/Group34/Ice group.png");
-  filter: drop-shadow(0px 4px 9px rgba(24, 41, 70, 0.32));
-}
 .heroPage__container__ice--right {
   position: absolute;
   width: 128px;
@@ -132,12 +99,19 @@ body {
   top: 414px;
   background: url(./images/HeroPage/Group34/Ice_Right.png);
 }
-.heroPage__container__title {
-  position: absolute;
-  width: 722px;
+.heroPage__container__mainBox {
+  display: flex;
+}
+.heroPage__container__mainBox__textBox {
+  margin-left: 6.67%;
+  margin-top: 59px;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.heroPage__container__mainBox__textBox__title {
+  width: 100%;
   height: 112px;
-  right: 622px;
-  top: 169px;
   font-family: Prompt, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -146,12 +120,10 @@ body {
   /* or 129% */
   color: #FDFDFD;
 }
-.heroPage__container__content {
-  position: absolute;
+.heroPage__container__mainBox__textBox__content {
   width: 510px;
   height: 80px;
-  right: 834px;
-  top: 311px;
+  margin-top: 20px;
   font-family: Prompt, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -162,47 +134,290 @@ body {
   color: #FFFFFF;
   opacity: 0.8;
 }
-.heroPage__container__group8 {
+.heroPage__container__mainBox__textBox__bottom {
+  width: 350px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.heroPage__container__mainBox__textBox__bottom__insurance__img {
   position: absolute;
   width: 139px;
   height: 70px;
-  left: 96px;
-  top: 423px;
 }
-.heroPage__container__group8__group7 {
-  position: absolute;
-  width: 139px;
-  height: 70px;
-}
-.heroPage__container__group35 {
-  position: absolute;
+.heroPage__container__mainBox__textBox__bottom__wattage__img {
   width: 179px;
   height: 70px;
-  left: 267px;
-  top: 423px;
 }
-.heroPage__container__group35__group7 {
+.heroPage__container__mainBox__imgBox {
+  width: 45%;
+  height: 678px;
+  margin-top: 160px;
+  position: relative;
+  left: -80px;
+}
+.heroPage__container__mainBox__imgBox__heroIllustration {
   position: absolute;
-  width: 179px;
-  height: 70px;
+  width: 555px;
+  height: 586px;
+  z-index: 10;
+  background: url("./images/HeroPage/Group34/Hero_illustration.png");
+  filter: drop-shadow(0px 4px 9px rgba(24, 41, 70, 0.32));
+}
+.heroPage__container__mainBox__imgBox__iceGroup {
+  position: absolute;
+  width: 333px;
+  height: 184px;
+  right: 5%;
+  top: 500px;
+  z-index: 11;
+  background: url("./images/HeroPage/Group34/Ice group.png");
+  filter: drop-shadow(0px 4px 9px rgba(24, 41, 70, 0.32));
 }
 .heroPage__container__footer {
   position: absolute;
-  width: 1120px;
+  margin: 0 auto;
+  bottom: 24px;
+  width: 100%;
   height: 160px;
-  left: 160px;
-  top: 972px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 200px;
   font-family: Prompt, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 54px;
   line-height: 70px;
   /* or 130% */
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 1px;
   color: #043C9C;
+}
+
+.iceMachine__container {
+  width: 100%;
+  height: 742px;
+  padding-top: 70px;
+  background: #FFFFFF;
+  display: flex;
+}
+.iceMachine__container__content--left__img {
+  transform: rotate(0.24deg);
+}
+.iceMachine__container__content--right {
+  height: 479px;
+  display: flex;
+  flex-direction: column;
+}
+.iceMachine__container__content--right__title--top {
+  font-family: Prompt, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 68px;
+  display: flex;
+  align-items: center;
+  color: #043C9C;
+}
+.iceMachine__container__content--right__content--top {
+  margin-top: 16px;
+  font-family: Prompt, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  /* or 147% */
+  color: #5C7392;
+}
+.iceMachine__container__content--right__iceShape {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-family: Prompt, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* or 122% */
+  display: flex;
+  flex-direction: column;
+  color: #043C9C;
+}
+.iceMachine__container__content--right__iceShape__title {
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+.iceMachine__container__content--right__iceShape__box {
+  margin-top: 25px;
+}
+.iceMachine__container__content--right__button {
+  width: 214px;
+  height: 56px;
+  padding: 16px 44px;
+  background: #4762FC;
+  border-radius: 10px;
+  font-family: Prompt, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 375px) {
+  .landing__ice1 {
+    display: none;
+  }
+
+  .heroPage__container {
+    height: 970px;
+    display: flex;
+    flex-direction: column;
+  }
+  .heroPage__container__ice--right {
+    display: none;
+  }
+  .heroPage__container__navBar {
+    height: 84px;
+  }
+  .heroPage__container__navBar__logo {
+    margin-left: 4.3%;
+    margin-top: 20px;
+    width: 62px;
+    height: 44px;
+  }
+  .heroPage__container__navBar__button {
+    margin-top: 22px;
+    margin-right: 4.3%;
+    width: 154px;
+    height: 42px;
+    padding: 10px 12px;
+  }
+  .heroPage__container__navBar__button__hotline {
+    width: 10px;
+    height: 22px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 4px;
+  }
+  .heroPage__container__navBar__button__text {
+    font-family: Prompt, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #3956FB;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+  }
+  .heroPage__container__mainBox {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .heroPage__container__mainBox__textBox {
+    width: 100%;
+    margin-left: unset;
+  }
+  .heroPage__container__mainBox__textBox__title {
+    height: unset;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heroPage__container__mainBox__textBox__content {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+    letter-spacing: 1px;
+  }
+  .heroPage__container__mainBox__textBox__bottom {
+    margin-top: unset;
+    width: 90%;
+  }
+  .heroPage__container__mainBox__textBox__bottom__insurance__img {
+    width: 130px;
+    height: 64px;
+  }
+  .heroPage__container__mainBox__textBox__bottom__wattage__img {
+    width: 160px;
+    height: 64px;
+  }
+  .heroPage__container__mainBox__imgBox {
+    margin-top: 60px;
+    width: 376.14px;
+    height: 396px;
+    left: unset;
+    padding-left: 25%;
+  }
+  .heroPage__container__mainBox__imgBox__heroIllustration {
+    width: 250px;
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+  }
+  .heroPage__container__mainBox__imgBox__iceGroup {
+    width: 194.5px;
+    height: 107.47px;
+    right: 0;
+    top: 290px;
+    background-size: cover;
+    background-position: center;
+  }
+  .heroPage__container__footer {
+    font-size: 23px;
+    line-height: 31px;
+    padding: 0 10px;
+  }
+
+  .iceMachine__container {
+    flex-direction: column;
+    padding: 0 10px;
+    padding-top: 40px;
+  }
+  .iceMachine__container__content--left__img {
+    width: 343px;
+    height: 270.74px;
+  }
+  .iceMachine__container__content--right__title--top {
+    font-size: 24px;
+    line-height: 31px;
+  }
+  .iceMachine__container__content--right__content--top {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .iceMachine__container__content--right__iceShape {
+    margin-top: 20px;
+  }
+  .iceMachine__container__content--right__iceShape__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .iceMachine__container__content--right__iceShape__box {
+    margin-top: 30px;
+  }
+  .iceMachine__container__content--right__button {
+    padding: 10px 32px;
+    width: 190px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
