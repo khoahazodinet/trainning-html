@@ -279,14 +279,15 @@ body{
     background: url(./images/Landing/Ice2.png);
   }
   &__content--left{
-    width: 50%;
+    width: 60%;
     &__img{
       width: 100%;
       transform: rotate(0.24deg);
     }
   }
   &__content--right{
-    width: 50%;
+    width: 40%;
+    padding-right: 20px;
     height: 479px;
     display: flex;
     flex-direction: column;
