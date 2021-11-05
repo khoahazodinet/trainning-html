@@ -19,6 +19,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+button {
+  cursor: pointer;
+}
+
 html {
   width: 100%;
 }
@@ -31,46 +35,6 @@ body {
   min-height: 5000px;
 }
 
-.landing__ice1 {
-  position: absolute;
-  width: 222px;
-  height: 190px;
-  left: 91px;
-  top: 761px;
-  z-index: 20;
-  background: url(./images/Landing/Ice1.png);
-}
-
-.landing__ice2 {
-  position: absolute;
-  width: 142px;
-  height: 123px;
-  left: 1250px;
-  top: 1100px;
-  z-index: 20;
-  background: url(./images/Landing/Ice2.png);
-}
-
-.landing__ice3 {
-  position: absolute;
-  width: 218px;
-  height: 188px;
-  left: 50px;
-  top: 2550px;
-  z-index: 20;
-  background: url(./images/Landing/Ice3.png);
-}
-
-.landing__ice4 {
-  position: absolute;
-  width: 218px;
-  height: 188px;
-  left: 1150px;
-  top: 5000px;
-  z-index: 20;
-  background: url(./images/Landing/Ice4.png);
-}
-
 .heroPage__container {
   position: relative;
   width: 100%;
@@ -78,6 +42,15 @@ body {
   background-size: cover;
   background-position: center;
   height: 1156px;
+}
+.heroPage__container .landing__ice1 {
+  position: absolute;
+  width: 222px;
+  height: 190px;
+  left: 91px;
+  top: 761px;
+  z-index: 20;
+  background: url(./images/Landing/Ice1.png);
 }
 .heroPage__container__navBar {
   width: 100%;
@@ -243,8 +216,18 @@ body {
   width: 100%;
   height: 742px;
   padding-top: 70px;
+  position: relative;
   background: #FFFFFF;
   display: flex;
+}
+.iceMachine__container .landing__ice2 {
+  position: absolute;
+  width: 142px;
+  height: 123px;
+  left: 1250px;
+  top: -70px;
+  z-index: 20;
+  background: url(./images/Landing/Ice2.png);
 }
 .iceMachine__container__content--left__img {
   transform: rotate(0.24deg);
@@ -435,18 +418,54 @@ body {
   width: 50%;
   position: relative;
 }
-.dipenser__container__content__contentRight__machineImg {
+.dipenser__container__content__contentRight .cupImg {
+  position: absolute;
+  z-index: 11;
+  animation-play-state: paused;
+  top: 530px;
+  left: 380px;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 1s;
+}
+.dipenser__container__content__contentRight:hover .cupImg {
+  animation-play-state: running;
+}
+@-webkit-keyframes orbit {
+  0% {
+    z-index: 9;
+    transform: scale(0.3);
+    top: 370px;
+    left: 380px;
+  }
+  40% {
+    transform: scale(0.4);
+    top: 400px;
+    left: 425px;
+  }
+  75% {
+    transform: scale(0.6);
+    top: 430px;
+    left: 470px;
+  }
+  90% {
+    z-index: 11;
+    transform: scale(0.8);
+    top: 500px;
+    left: 410px;
+  }
+  100% {
+    transform: scale(1);
+    top: 530px;
+    left: 380px;
+  }
+}
+.dipenser__container__content__contentRight .machineImg {
   position: absolute;
   top: 68px;
   z-index: 11;
 }
-.dipenser__container__content__contentRight__cupImg {
-  position: relative;
-  top: 530px;
-  left: 420px;
-  z-index: 11;
-}
-.dipenser__container__content__contentRight__arrowImg {
+.dipenser__container__content__contentRight .arrowImg {
   position: absolute;
   top: 450px;
   left: 535px;
@@ -456,6 +475,16 @@ body {
 .flakeIce__container {
   padding-top: 70px;
   height: 876px;
+  position: relative;
+}
+.flakeIce__container .landing__ice3 {
+  position: absolute;
+  width: 218px;
+  height: 188px;
+  left: 50px;
+  top: -120px;
+  z-index: 20;
+  background: url(./images/Landing/Ice3.png);
 }
 .flakeIce__container__content {
   display: flex;
@@ -464,18 +493,51 @@ body {
   width: 50%;
   position: relative;
 }
-.flakeIce__container__content__contentLeft__bigImg {
+.flakeIce__container__content__contentLeft .bigImg {
   position: absolute;
+  z-index: 11;
 }
-.flakeIce__container__content__contentLeft__vector {
+.flakeIce__container__content__contentLeft .circle {
   position: absolute;
-  top: 400px;
-  left: 700px;
-}
-.flakeIce__container__content__contentLeft__circle {
-  position: absolute;
+  z-index: 11;
+  animation-play-state: paused;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit2;
+  -webkit-animation-duration: 1s;
   top: 440px;
   left: 580px;
+}
+.flakeIce__container__content__contentLeft:hover .circle {
+  animation-play-state: running;
+}
+@-webkit-keyframes orbit2 {
+  0% {
+    z-index: 9;
+    transform: scale(0.3);
+    top: 280px;
+    left: 530px;
+  }
+  40% {
+    transform: scale(0.4);
+    top: 300px;
+    left: 580px;
+  }
+  75% {
+    transform: scale(0.6);
+    top: 340px;
+    left: 630px;
+  }
+  90% {
+    z-index: 11;
+    transform: scale(0.8);
+    top: 410px;
+    left: 605px;
+  }
+  100% {
+    transform: scale(1);
+    top: 440px;
+    left: 580px;
+  }
 }
 .flakeIce__container__content__contentRight {
   width: 50%;
@@ -720,7 +782,17 @@ body {
 .footer__container {
   height: 701px;
   width: 100%;
+  position: relative;
   background: #4762fc url("./images/Footer/BG.png");
+}
+.footer__container .landing__ice4 {
+  position: absolute;
+  width: 218px;
+  height: 188px;
+  left: 1150px;
+  top: -90px;
+  z-index: 20;
+  background: url(./images/Landing/Ice4.png);
 }
 .footer__container__content {
   display: flex;
@@ -868,6 +940,8 @@ body {
     flex-direction: column;
   }
   .heroPage__container__ice--right {
+    top: 0;
+    left: 0;
     display: none;
   }
   .heroPage__container__navBar {
@@ -972,11 +1046,10 @@ body {
 
   .iceMachine__container {
     flex-direction: column;
-    padding: 0 10px;
-    padding-top: 40px;
+    padding: 40px 10px 0 10px;
   }
   .iceMachine__container__content--left__img {
-    width: 343px;
+    width: unset;
     height: 270.74px;
   }
   .iceMachine__container__content--right__title--top {
@@ -1039,20 +1112,16 @@ body {
     width: 100%;
     height: 110px;
   }
-  .dipenser__container__content__contentRight__machineImg {
+  .dipenser__container__content__contentRight .machineImg {
     width: 240px;
     top: -140px;
     left: 63px;
   }
-  .dipenser__container__content__contentRight__cupImg {
+  .dipenser__container__content__contentRight .cupImg {
+    display: none;
     top: 50px;
     left: 230px;
     width: 89px;
-  }
-  .dipenser__container__content__contentRight__arrowImg {
-    width: 30px;
-    top: 30px;
-    left: 280px;
   }
 
   .flakeIce__container {
@@ -1065,15 +1134,11 @@ body {
     width: 100%;
     height: 350px;
   }
-  .flakeIce__container__content__contentLeft__bigImg {
+  .flakeIce__container__content__contentLeft .bigImg {
     width: 343px;
   }
-  .flakeIce__container__content__contentLeft__vector {
-    top: 200px;
-    left: 310px;
-    width: 25.75px;
-  }
-  .flakeIce__container__content__contentLeft__circle {
+  .flakeIce__container__content__contentLeft .circle {
+    display: none;
     top: 210px;
     left: 260px;
     width: 88.75px;
@@ -1151,7 +1216,7 @@ body {
   }
 
   .footer__container {
-    height: unset;
+    height: 830px;
     padding: 0 10px 50px 10px;
   }
   .footer__container__content {
