@@ -425,16 +425,20 @@ body {
 }
 .dipenser__container__content__contentRight .cupImg {
   position: absolute;
-  z-index: 11;
-  animation-play-state: paused;
-  top: 530px;
+  z-index: 9;
+  transform: scale(0.3);
+  top: 370px;
   left: 380px;
+}
+.dipenser__container__content__contentRight:hover .cupImg {
   -webkit-animation-timing-function: linear;
   -webkit-animation-name: orbit;
   -webkit-animation-duration: 1s;
-}
-.dipenser__container__content__contentRight:hover .cupImg {
-  animation-play-state: running;
+  -webkit-animation-direction: alternate;
+  z-index: 11;
+  top: 530px;
+  left: 380px;
+  transform: scale(1);
 }
 @-webkit-keyframes orbit {
   0% {
@@ -506,16 +510,19 @@ body {
 }
 .flakeIce__container__content__contentLeft .circle {
   position: absolute;
-  z-index: 11;
-  animation-play-state: paused;
+  z-index: 9;
+  transform: scale(0.3);
+  top: 280px;
+  left: 69.44%;
+}
+.flakeIce__container__content__contentLeft:hover .circle {
   -webkit-animation-timing-function: linear;
   -webkit-animation-name: orbit2;
   -webkit-animation-duration: 1s;
+  transform: scale(1);
+  z-index: 11;
   top: 440px;
   left: 76.38%;
-}
-.flakeIce__container__content__contentLeft:hover .circle {
-  animation-play-state: running;
 }
 @-webkit-keyframes orbit2 {
   0% {
@@ -796,7 +803,7 @@ body {
   position: absolute;
   width: 218px;
   height: 188px;
-  left: 70%;
+  left: 78%;
   top: -90px;
   z-index: 20;
   background: url(./images/Landing/Ice4.png);
@@ -841,11 +848,9 @@ body {
   opacity: 0.6;
   background-color: unset;
 }
-.footer__container__content__left__inputBox input ::placeholder {
+.footer__container__content__left__inputBox input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #FFFFFF;
-  opacity: 0.6;
-  /* Firefox */
+  color: #FFFFFF !important;
 }
 .footer__container__content__left__inputBox input:focus {
   outline: none;
@@ -853,8 +858,8 @@ body {
 .footer__container__content__left__inputBox button {
   cursor: pointer;
   position: absolute;
-  top: 2px;
-  right: 4px;
+  top: 3px;
+  right: 3px;
   background: #FFFFFF;
   border-radius: 9px;
   width: 151px;
@@ -990,7 +995,7 @@ body {
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin: 0px 8px;
+    margin: 0 8px;
   }
   .heroPage__container__mainBox {
     flex-direction: column;
